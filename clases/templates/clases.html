@@ -1,15 +1,21 @@
 <!doctype html>
 <html lang="es">
 <head>
+	
+	{% load discusiones_tags %}
+
 	<meta charset="UTF-8">
 	<title>MiniPlataforma</title>
 
 	<link rel="stylesheet" href="/static/css/normalize.css">
 	<link rel="stylesheet" href="/static/css/clases.css">
+	<link rel="stylesheet" href="/static/css/discusion.css">
+
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="/static/js/prefixfree.min.js"></script>
 	<script src="/static/js/main.js"></script>
+	<script src="/static/js/discusion.js"></script>
 </head>
 <body>
 	<header>
@@ -34,6 +40,10 @@
 			<article id="contenido-clase">
 				
 			</article>
+		</section>
+		<section id="side">
+			<!-- incluir el modulo de discusion -->
+			{% show_discusiones %}
 		</section>
 	</section>
 </body>

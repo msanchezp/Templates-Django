@@ -15,4 +15,8 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     # url(r'^admin/', include(admin.site.urls)),
     url(r'^$','clases.views.home'),
+    url(r'^cargar-contenido-clase/(?P<id>\d+)$','clases.views.cargar_clase', name='cargar_clase'),
+    url(r'^guardar-pregunta/$', 'discusion.views.guardar_pregunta'),
+    url(r'^cargar-respuestas/(?P<id>\d+)$', 'discusion.views.cargar_respuestas'),
+    url(r'^guardar-respuesta/$', 'discusion.views.guardar_respuesta'),
 )
